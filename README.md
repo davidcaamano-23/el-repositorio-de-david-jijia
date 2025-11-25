@@ -1,0 +1,1 @@
+Es un trabajo de Lenguaje de Programacion en donde el profesor nos pide crear nuestro primer repositorio, subir los codigos y documentar cada codigo, ademas Ejecutar, comprender y explicar un algoritmo genético desde https://scikit-learn.org/stable/
