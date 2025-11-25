@@ -1,0 +1,26 @@
+Definición de clases
+
+Province: representa una provincia con su nombre y población.
+
+Region: agrupa varias provincias y calcula la población total de la región.
+
+Carga de datos
+Se crea un diccionario con la población aproximada de varias provincias de Bulgaria.
+
+Agrupación por regiones
+Las provincias se organizan dentro de tres zonas: Norte, Centro y Sur.
+
+Creación de objetos
+Se generan objetos Region, cada uno con las provincias correspondientes.
+
+Generación del gráfico
+Se construye un gráfico de barras apiladas usando Matplotlib.
+
+Cada barra representa una región.
+
+Cada sección dentro de la barra es una provincia.
+
+Encima de cada barra se muestra el total de habitantes.
+
+Tabla resumen
+Se genera una tabla que muestra la población total por región usando Pandas.

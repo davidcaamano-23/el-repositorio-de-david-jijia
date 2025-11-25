@@ -1,0 +1,71 @@
+¿COMO FUNCIONA? 
+usando las librerias de tkinter en python nos permite realizar operaciones super basicas como (suma,resta,multiplicacion, division)
+-si el resultado es 2, muestra una imagen especial (no se pudo cargar) en una ventana nueva
+-si intentas dividir entre 0, se mostrara un mensaje de error y otra imagen(tampoco se pudo cargar):(
+-en cualquier error gramatical matematico la calculadora dira "ERROR"
+
+
+
+¿PARA ESTO?
+self.entrada = tk.Entry(...)
+class Calculadora:
+    """
+    Clase principal que construye una calculadora gráfica usando Tkinter.
+    Contiene la interfaz, los botones, la lógica de cálculo y la visualización de imágenes.
+    """
+¿Para calcular? 
+resultado = eval(expresion)
+¿Para configurar tamaño de ventana?
+
+def __init__(self, root):
+        """
+        Constructor: configura la ventana principal e inicializa los elementos de la calculadora.
+        """
+        self.root = root
+        self.root.title("Calculadora del kokun")
+        self.root.configure(bg="#f0f0f0")
+self.entrada = tk.Entry(self.root, width=40, borderwidth=5)
+        self.entrada.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+
+
+"""DEFINIMOS LOS BOTONES EN DONDE VAN EN EL SIGUIENTE ORDEN """
+
+botones = [
+            ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
+            ('4', 2, 0), ('5', 2, 1), ('6', 2, 2), ('*', 2, 3),
+            ('1', 3, 0), ('2', 3, 1), ('3', 3, 2), ('-', 3, 3),
+            ('0', 4, 0), ('.', 4, 1), ('=', 4, 2), ('+', 4, 3),
+            ('C', 5, 0)
+        ]
+""" Y POR ULTIMO LOS BOTONES DE OPERACIONES Y QUEDA TIKITAKA """
+for (texto, fila, columna) in botones:
+
+            if texto == '=':
+                # Botón que ejecuta la operación
+                tk.Button(
+                    self.root,
+                    text=texto,
+                    padx=30, pady=20,
+                    font=("Arial", 14),
+                    command=self.calcular
+                ).grid(row=fila, column=columna)
+
+            elif texto == 'C':
+                # Botón para limpiar la pantalla
+                tk.Button(
+                    self.root,
+                    text=texto,
+                    padx=30, pady=20,
+                    font=("Arial", 14),
+                    command=self.limpiar
+                ).grid(row=fila, column=columna, columnspan=4)
+
+            else:
+                # Botones normales: números y operadores
+                tk.Button(
+                    self.root,
+                    text=texto,
+                    padx=30, pady=20,
+                    font=("Arial", 14),
+                    command=lambda t=texto: self.agregar(t)
+                ).grid(row=fila, column=columna)
