@@ -1,0 +1,5 @@
+El script que utilicé trabaja con scikit-learn para comparar el rendimiento de diez algoritmos clásicos de clasificación aplicados a tres conjuntos de datos sintéticos: moons, circles y un dataset linealmente separable.
+
+En cada uno de estos datasets, el código primero los divide en datos de entrenamiento y prueba. Luego, cada modelo se entrena dentro de un pipeline que incluye una etapa de estandarización. Después calcula su precisión (accuracy) y finalmente grafica la frontera de decisión que genera cada clasificador.
+
+El resultado es una figura donde cada fila representa un dataset y cada columna un clasificador, lo que me permite comparar visualmente cómo se comporta cada algoritmo frente a diferentes distribuciones de datos y evaluar qué tan precisa es su predicción.
